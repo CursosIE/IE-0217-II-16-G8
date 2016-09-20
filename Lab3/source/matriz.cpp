@@ -4,6 +4,7 @@
 Matriz::Matriz():
 	n_size(1), m_size(1)
 {
+	//std::cout << this << " ha nacido al mundo." << std::endl;
 	datos = new double[1];
 	datos[0] = 0;
 
@@ -12,6 +13,7 @@ Matriz::Matriz():
 Matriz::Matriz(int n, int m):
 	n_size(n), m_size(m)
 {
+	//std::cout << this << " ha nacido al mundo." << std::endl;
 	if (n < 1 || m < 1) {
 		//throw std::exception("Ilegal size for matrix");
 		std::cerr << "Error de tamaño" << std::endl;
@@ -27,8 +29,22 @@ Matriz::Matriz(int n, int m):
 	}
 }
 
+Matriz::Matriz(const Matriz& other):
+	n_size(other.n_size), m_size(other.m_size)
+{
+	datos = new double[n_size*m_size];
+	for (int i = 0; i < n_size; i++) {
+		for (int j = 0; j < m_size ; j++) {
+			datos[i*m_size + j] = other.datos[i*m_size + j];
+		}
+	}
+}
+
+
+
 Matriz::~Matriz() {
-	std::cout << datos << std::endl;
+	//std::cout << this << " fue enviado al avismo." << std::endl;
+	//std::cout << "Desctructor... " << datos << std::endl;
 	if (datos)
 		delete[] datos;
 }
@@ -117,9 +133,9 @@ void Matriz::operator~() {
 	}
 }
 
-void Matriz::operator=(const Matriz &other) {
+Matriz& Matriz::operator=(const Matriz &other) {
 	if (datos) {
-		std::cout << datos << std::endl;
+		//std::cout << "Operador = , " << datos << std::endl;
 		delete[] datos;
 		datos = 0;
 	}
@@ -131,6 +147,7 @@ void Matriz::operator=(const Matriz &other) {
 			datos[i*m_size + j] = other.datos[i*other.m_size + j];
 		}
 	}
+	return *this;
 }
 
 void Matriz::setAt(int x, int y, double val) {
