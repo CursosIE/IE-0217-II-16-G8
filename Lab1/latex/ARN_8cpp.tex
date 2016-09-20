@@ -1,0 +1,98 @@
+\hypertarget{ARN_8cpp}{}\section{A\+R\+N.\+cpp File Reference}
+\label{ARN_8cpp}\index{A\+R\+N.\+cpp@{A\+R\+N.\+cpp}}
+{\ttfamily \#include \char`\"{}A\+R\+N.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for A\+R\+N.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{ARN_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})\hypertarget{ARN_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{ARN_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\item 
+char $\ast$ \hyperlink{ARN_8cpp_ac39e6a29f85f490e595b4934bf045e4e}{traducir\+A\+R\+Na\+AA} (char $\ast$orig, int size)
+\item 
+void \hyperlink{ARN_8cpp_abe553055efef51b7180cf3761659682b}{imprimir\+Arreglo\+De\+Char} (char $\ast$str, int num)
+\item 
+bool \hyperlink{ARN_8cpp_aeea50fcfde521778d1a7549e664ce888}{checkeo\+Argumentos} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+char \hyperlink{ARN_8cpp_af8b80c835550e9ea910d5d8144ddbf7a}{next\+Seq} (char $\ast$sub)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programa que traduce una cadena de A\+RN en la correspondiente cadena de aminoácidos. 
+
+\subsection{Function Documentation}
+\index{A\+R\+N.\+cpp@{A\+R\+N.\+cpp}!checkeo\+Argumentos@{checkeo\+Argumentos}}
+\index{checkeo\+Argumentos@{checkeo\+Argumentos}!A\+R\+N.\+cpp@{A\+R\+N.\+cpp}}
+\subsubsection[{\texorpdfstring{checkeo\+Argumentos(int argc, char $\ast$argv[])}{checkeoArgumentos(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}bool checkeo\+Argumentos (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{ARN_8cpp_aeea50fcfde521778d1a7549e664ce888}{}\label{ARN_8cpp_aeea50fcfde521778d1a7549e664ce888}
+Revisa los argumentos que recibe el programa. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Cantidad de argumentos. \\
+\hline
+{\em argv} & Argumentos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Si los argumentos son válidos retorna verdadero. 
+\end{DoxyReturn}
+\index{A\+R\+N.\+cpp@{A\+R\+N.\+cpp}!imprimir\+Arreglo\+De\+Char@{imprimir\+Arreglo\+De\+Char}}
+\index{imprimir\+Arreglo\+De\+Char@{imprimir\+Arreglo\+De\+Char}!A\+R\+N.\+cpp@{A\+R\+N.\+cpp}}
+\subsubsection[{\texorpdfstring{imprimir\+Arreglo\+De\+Char(char $\ast$str, int num)}{imprimirArregloDeChar(char *str, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}void imprimir\+Arreglo\+De\+Char (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{ARN_8cpp_abe553055efef51b7180cf3761659682b}{}\label{ARN_8cpp_abe553055efef51b7180cf3761659682b}
+Esta función se encarga de imprimir cierto número de caracteres de un string. 
+\begin{DoxyParams}{Parameters}
+{\em str} & Puntero a la cadena de caracteres. \\
+\hline
+{\em num} & Número de caracteres a imprimir. \\
+\hline
+\end{DoxyParams}
+\index{A\+R\+N.\+cpp@{A\+R\+N.\+cpp}!next\+Seq@{next\+Seq}}
+\index{next\+Seq@{next\+Seq}!A\+R\+N.\+cpp@{A\+R\+N.\+cpp}}
+\subsubsection[{\texorpdfstring{next\+Seq(char $\ast$sub)}{nextSeq(char *sub)}}]{\setlength{\rightskip}{0pt plus 5cm}char next\+Seq (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{sub}
+\end{DoxyParamCaption}
+)}\hypertarget{ARN_8cpp_af8b80c835550e9ea910d5d8144ddbf7a}{}\label{ARN_8cpp_af8b80c835550e9ea910d5d8144ddbf7a}
+Recibe un grupo de 3 caracteres correspondientes a un codón y los traduce a un áminoacido. 
+\begin{DoxyParams}{Parameters}
+{\em sub} & Puntero al primer caracter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Caracter que representa al aminoácido traducido. 
+\end{DoxyReturn}
+\index{A\+R\+N.\+cpp@{A\+R\+N.\+cpp}!traducir\+A\+R\+Na\+AA@{traducir\+A\+R\+Na\+AA}}
+\index{traducir\+A\+R\+Na\+AA@{traducir\+A\+R\+Na\+AA}!A\+R\+N.\+cpp@{A\+R\+N.\+cpp}}
+\subsubsection[{\texorpdfstring{traducir\+A\+R\+Na\+A\+A(char $\ast$orig, int size)}{traducirARNaAA(char *orig, int size)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ traducir\+A\+R\+Na\+AA (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{orig, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{ARN_8cpp_ac39e6a29f85f490e595b4934bf045e4e}{}\label{ARN_8cpp_ac39e6a29f85f490e595b4934bf045e4e}
+Retorna un arreglo de caracteres con la traduccion a aminoacidos de una cadena de A\+RN. Reserva la memoria necesaria automáticamente, el usuario es responsable de liberarla. 
+\begin{DoxyParams}{Parameters}
+{\em orig} & Arreglo de caracteres que representa la cadena de A\+RN. \\
+\hline
+{\em size} & Tamaño de orig. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La cadena de aminoacidos, la funcion reserva el nuevo espacio de memoria. 
+\end{DoxyReturn}
