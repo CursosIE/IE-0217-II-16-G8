@@ -1,0 +1,7 @@
+Se incluye un archivo Makefile con dos targets.
+
+all:
+Compila el programa y crea el ejecutable, el archivo generado se llama "a.out"
+
+clean:
+Borra los archivos intermedios y ejecutables para hacer una compilación desde cero

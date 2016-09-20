@@ -1,0 +1,134 @@
+\hypertarget{classFigura}{}\section{Figura Class Reference}
+\label{classFigura}\index{Figura@{Figura}}
+
+
+{\ttfamily \#include $<$figura.\+h$>$}
+
+
+
+Inheritance diagram for Figura\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classFigura__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Figura} (char $\ast$v\+\_\+nombre, char $\ast$v\+\_\+color)\hypertarget{classFigura_a11d2d8d29aee9f74b813df7abdbb4971}{}\label{classFigura_a11d2d8d29aee9f74b813df7abdbb4971}
+
+\item 
+virtual double \hyperlink{classFigura_ade6b12995c86cb72e37738668d77963d}{area} ()
+\item 
+virtual double \hyperlink{classFigura_a7451dfc1da3533fa15205df11afe7ac3}{perimetro} ()
+\item 
+void \hyperlink{classFigura_a1a66a42a0eed6dcacfb410d970780fa5}{set\+Nombre} (char $\ast$v\+\_\+nombre)
+\item 
+void \hyperlink{classFigura_ac593544158f072cf57835892cc35096e}{set\+Color} (char $\ast$v\+\_\+color)
+\item 
+std\+::string \hyperlink{classFigura_ad33b005e0206b70251e652f53796d586}{get\+Nombre} ()
+\item 
+std\+::string \hyperlink{classFigura_a940226fafa4e275b6a48dcff09fb5927}{get\+Color} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classFigura_a67df59705ff131e5a56fe4d4af3cfb73}{nombre}
+\item 
+std\+::string \hyperlink{classFigura_ab27a1a9f1236ad5ce14fce5776ed3aea}{color}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase que representa una figura. Define funciones básicas que debe tener cualquier otra clase derivada. 
+
+\subsection{Member Function Documentation}
+\index{Figura@{Figura}!area@{area}}
+\index{area@{area}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{area()}{area()}}]{\setlength{\rightskip}{0pt plus 5cm}double Figura\+::area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFigura_ade6b12995c86cb72e37738668d77963d}{}\label{classFigura_ade6b12995c86cb72e37738668d77963d}
+Función que calcula el área de la figura. Se puede reimplementar en clases derivadas. \begin{DoxyReturn}{Returns}
+Para objetos \hyperlink{classFigura}{Figura} puros devuelve 0 siempre. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classTriangulo_a1c71a04df8caa1bcb52898636fb20004}{Triangulo}, \hyperlink{classCirculo_aded0c4ee374eb000f59d8d8da01ad72d}{Circulo}, and \hyperlink{classCuadrado_a379a755de0b95f295e30e6049e19426c}{Cuadrado}.
+
+\index{Figura@{Figura}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{get\+Color()}{getColor()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Figura\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFigura_a940226fafa4e275b6a48dcff09fb5927}{}\label{classFigura_a940226fafa4e275b6a48dcff09fb5927}
+Devuelve el color de la figura. \begin{DoxyReturn}{Returns}
+El color. 
+\end{DoxyReturn}
+\index{Figura@{Figura}!get\+Nombre@{get\+Nombre}}
+\index{get\+Nombre@{get\+Nombre}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{get\+Nombre()}{getNombre()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Figura\+::get\+Nombre (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFigura_ad33b005e0206b70251e652f53796d586}{}\label{classFigura_ad33b005e0206b70251e652f53796d586}
+Devuelve el nombre de la figura. \begin{DoxyReturn}{Returns}
+El nombre. 
+\end{DoxyReturn}
+\index{Figura@{Figura}!perimetro@{perimetro}}
+\index{perimetro@{perimetro}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{perimetro()}{perimetro()}}]{\setlength{\rightskip}{0pt plus 5cm}double Figura\+::perimetro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFigura_a7451dfc1da3533fa15205df11afe7ac3}{}\label{classFigura_a7451dfc1da3533fa15205df11afe7ac3}
+Función que calcula el perímetro de la figura. Se puede reimplementar en clases derivadas. \begin{DoxyReturn}{Returns}
+Para objetos \hyperlink{classFigura}{Figura} puros devuelve 0 siempre. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classTriangulo_a6f5c542675a726b35f48f953bb2d9acf}{Triangulo}, \hyperlink{classCirculo_acc35f8fdd7303fca9fe54b0da458bdf2}{Circulo}, and \hyperlink{classCuadrado_aa7072852e41bde681376b57503495c74}{Cuadrado}.
+
+\index{Figura@{Figura}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{set\+Color(char $\ast$v\+\_\+color)}{setColor(char *v_color)}}]{\setlength{\rightskip}{0pt plus 5cm}void Figura\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v\+\_\+color}
+\end{DoxyParamCaption}
+)}\hypertarget{classFigura_ac593544158f072cf57835892cc35096e}{}\label{classFigura_ac593544158f072cf57835892cc35096e}
+Cambia el color de la figura. 
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+color} & El nuevo color. \\
+\hline
+\end{DoxyParams}
+\index{Figura@{Figura}!set\+Nombre@{set\+Nombre}}
+\index{set\+Nombre@{set\+Nombre}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{set\+Nombre(char $\ast$v\+\_\+nombre)}{setNombre(char *v_nombre)}}]{\setlength{\rightskip}{0pt plus 5cm}void Figura\+::set\+Nombre (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v\+\_\+nombre}
+\end{DoxyParamCaption}
+)}\hypertarget{classFigura_a1a66a42a0eed6dcacfb410d970780fa5}{}\label{classFigura_a1a66a42a0eed6dcacfb410d970780fa5}
+Cambia el nombre de la figura. 
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+nombre} & El nuevo nombre. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Figura@{Figura}!color@{color}}
+\index{color@{color}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{color}{color}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Figura\+::color\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classFigura_ab27a1a9f1236ad5ce14fce5776ed3aea}{}\label{classFigura_ab27a1a9f1236ad5ce14fce5776ed3aea}
+Color de la figura. \index{Figura@{Figura}!nombre@{nombre}}
+\index{nombre@{nombre}!Figura@{Figura}}
+\subsubsection[{\texorpdfstring{nombre}{nombre}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Figura\+::nombre\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classFigura_a67df59705ff131e5a56fe4d4af3cfb73}{}\label{classFigura_a67df59705ff131e5a56fe4d4af3cfb73}
+Nombre de la figura. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/figura.\+h\item 
+source/figura.\+cpp\end{DoxyCompactItemize}

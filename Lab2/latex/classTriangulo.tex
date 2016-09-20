@@ -1,0 +1,133 @@
+\hypertarget{classTriangulo}{}\section{Triangulo Class Reference}
+\label{classTriangulo}\index{Triangulo@{Triangulo}}
+
+
+{\ttfamily \#include $<$triangulo.\+h$>$}
+
+
+
+Inheritance diagram for Triangulo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classTriangulo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Triangulo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classTriangulo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTriangulo_a905d421bd19655a979ccad9e2998db0c}{Triangulo} ()
+\item 
+\hyperlink{classTriangulo_ab29b2c829712fa6d7ea313373e0d5262}{Triangulo} (double l1, double l2, double l3)
+\item 
+virtual \hyperlink{classTriangulo_aca2be15b19831e8d7a5331808f5c1958}{$\sim$\+Triangulo} ()
+\item 
+virtual double \hyperlink{classTriangulo_a1c71a04df8caa1bcb52898636fb20004}{area} ()
+\item 
+virtual double \hyperlink{classTriangulo_a6f5c542675a726b35f48f953bb2d9acf}{perimetro} ()
+\item 
+void \hyperlink{classTriangulo_af7fc480161706ec74ece32e9ef1fed7f}{operator$\sim$} ()
+\item 
+void \hyperlink{classTriangulo_ae0552ffa9641d36e1f571349e5de1070}{operator!} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Clase que representa un triángulo. Hereda de la clase figura. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\subsubsection[{\texorpdfstring{Triangulo()}{Triangulo()}}]{\setlength{\rightskip}{0pt plus 5cm}Triangulo\+::\+Triangulo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTriangulo_a905d421bd19655a979ccad9e2998db0c}{}\label{classTriangulo_a905d421bd19655a979ccad9e2998db0c}
+Constructor por defecto. Crea un triángulo de lados 3, 4 y 5. \index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\subsubsection[{\texorpdfstring{Triangulo(double l1, double l2, double l3)}{Triangulo(double l1, double l2, double l3)}}]{\setlength{\rightskip}{0pt plus 5cm}Triangulo\+::\+Triangulo (
+\begin{DoxyParamCaption}
+\item[{double}]{l1, }
+\item[{double}]{l2, }
+\item[{double}]{l3}
+\end{DoxyParamCaption}
+)}\hypertarget{classTriangulo_ab29b2c829712fa6d7ea313373e0d5262}{}\label{classTriangulo_ab29b2c829712fa6d7ea313373e0d5262}
+Constructor que recibe la longitud de los tres lados del triángulo. Verifica que los lados tengan una longitud válida, de lo contrario imprime un mensaje de error y construye un triángulo de lados 3, 4 y 5. 
+\begin{DoxyParams}{Parameters}
+{\em l1} & Uno de los lados. \\
+\hline
+{\em l2} & Uno de los lados. \\
+\hline
+{\em l3} & Uno de los lados. \\
+\hline
+\end{DoxyParams}
+\index{Triangulo@{Triangulo}!````~Triangulo@{$\sim$\+Triangulo}}
+\index{````~Triangulo@{$\sim$\+Triangulo}!Triangulo@{Triangulo}}
+\subsubsection[{\texorpdfstring{$\sim$\+Triangulo()}{~Triangulo()}}]{\setlength{\rightskip}{0pt plus 5cm}Triangulo\+::$\sim$\+Triangulo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTriangulo_aca2be15b19831e8d7a5331808f5c1958}{}\label{classTriangulo_aca2be15b19831e8d7a5331808f5c1958}
+Destructor por defecto. 
+
+\subsection{Member Function Documentation}
+\index{Triangulo@{Triangulo}!area@{area}}
+\index{area@{area}!Triangulo@{Triangulo}}
+\subsubsection[{\texorpdfstring{area()}{area()}}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTriangulo_a1c71a04df8caa1bcb52898636fb20004}{}\label{classTriangulo_a1c71a04df8caa1bcb52898636fb20004}
+Calcula el área del triángulo. \begin{DoxyReturn}{Returns}
+El resultado del cálculo. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classFigura_ade6b12995c86cb72e37738668d77963d}{Figura}.
+
+\index{Triangulo@{Triangulo}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Triangulo@{Triangulo}}
+\subsubsection[{\texorpdfstring{operator"!()}{operator!()}}]{\setlength{\rightskip}{0pt plus 5cm}void Triangulo\+::operator! (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTriangulo_ae0552ffa9641d36e1f571349e5de1070}{}\label{classTriangulo_ae0552ffa9641d36e1f571349e5de1070}
+Imprime el area y el perimetro. \index{Triangulo@{Triangulo}!operator````~@{operator$\sim$}}
+\index{operator````~@{operator$\sim$}!Triangulo@{Triangulo}}
+\subsubsection[{\texorpdfstring{operator$\sim$()}{operator~()}}]{\setlength{\rightskip}{0pt plus 5cm}void Triangulo\+::operator$\sim$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTriangulo_af7fc480161706ec74ece32e9ef1fed7f}{}\label{classTriangulo_af7fc480161706ec74ece32e9ef1fed7f}
+Imprime los datos del triangulo. \index{Triangulo@{Triangulo}!perimetro@{perimetro}}
+\index{perimetro@{perimetro}!Triangulo@{Triangulo}}
+\subsubsection[{\texorpdfstring{perimetro()}{perimetro()}}]{\setlength{\rightskip}{0pt plus 5cm}double Triangulo\+::perimetro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTriangulo_a6f5c542675a726b35f48f953bb2d9acf}{}\label{classTriangulo_a6f5c542675a726b35f48f953bb2d9acf}
+Calcula el perímetro del triángulo. \begin{DoxyReturn}{Returns}
+El resultado del cálculo. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classFigura_a7451dfc1da3533fa15205df11afe7ac3}{Figura}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/triangulo.\+h\item 
+source/triangulo.\+cpp\end{DoxyCompactItemize}
