@@ -5,6 +5,7 @@ obj := $(notdir $(src:.cpp=.o))
 CC = g++ -Wall -std=c++11 -I $(inc)
 
 all: $(obj)
+	$(CC) $^
 
 %.o: source/%.cpp
 	$(CC) -c -o $@ $<
