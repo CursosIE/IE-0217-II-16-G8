@@ -135,7 +135,7 @@ void Matriz::operator~() {
 
 Matriz& Matriz::operator=(const Matriz &other) {
 	if (datos) {
-		std::cout << "Operador = , " << datos << std::endl;
+		//std::cout << "Operador = , " << datos << std::endl;
 		delete[] datos;
 		datos = nullptr;
 	}
