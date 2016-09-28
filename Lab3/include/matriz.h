@@ -27,7 +27,7 @@ class Matriz {
 		/**
 		 * Constructor por copia
 		 */
-		Matriz(const Matriz& other);
+		Matriz(const Matriz &other);
 
 		/**
 		 * Destructor por defecto
