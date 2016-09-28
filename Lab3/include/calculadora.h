@@ -2,19 +2,31 @@
 #define CALCULADORA_H
 #include <string>
 
-template <typename data>
+template <typename Data>
 class Calculadora{
 	public:
 
-		Calculadora();
+		Calculadora(){}
+		virtual ~Calculadora(){}
 
-		virtual add(const data &d1, const data &d2);
-		virtual sub(const data &d1, const data &d2);
-		virtual mul(const data &d1, const data &d2);
-		virtual div(const data &d1, const data &d2);
-		virtual print(const data &d);
+	Data add(Data &d1, const Data &d2) {
+			return d1 + d2;
+		}
+	Data sub(Data &d1, const Data &d2) {
+			return d1-d2;
+		}
 
-		virtual ~Figura();
+	Data mul(Data &d1, const Data &d2) {
+			return d1*d2;
+		}
+
+	Data div(Data &d1, const Data &d2) {
+			return d1/d2;
+		}
+
+	Data print(Data &d1) {
+		  ~d1;
+		}
 
 };
 
