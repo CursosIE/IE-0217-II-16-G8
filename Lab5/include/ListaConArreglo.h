@@ -4,7 +4,8 @@
 #include <iostream>
 #include "Lista.h"
 
-class ListaConArreglo : public Lista {
+template <typename type_t>
+class ListaConArreglo : public Lista<type_t>{
 public:
     ListaConArreglo();
     ListaConArreglo(int N);
@@ -12,12 +13,12 @@ public:
     ~ListaConArreglo();
 
 
-    void agregar(char e);
-    void agregarEnOrdenAscendente(char e);
-    void eliminar(char e);
+    void agregar(type_t e);
+    void agregarEnOrdenAscendente(type_t e);
+    void eliminar(type_t e);
     void eliminarK(int k);
 
-    int buscar(char e);
+    int buscar(type_t e);
 
     int siguienteK(int k);
     int anteriorK(int k);
@@ -29,7 +30,7 @@ public:
 private:
     int tam;
     int ultimo;
-    char* data; //almacenar los elementos
+    type_t* data; //almacenar los elementos
 };
 
 #endif /* LISTACONARREGLO_H */
