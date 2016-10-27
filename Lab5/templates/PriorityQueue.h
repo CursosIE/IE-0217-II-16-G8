@@ -3,92 +3,94 @@
 
 #include "Cola.h"
 #include "LinkedNode.h"
+#include <iostream> 
 
 template <typename type_t>
 class PriorityQueue : public Cola<type_t> {
-	typename LinkedNode<type_t> node_t;
 	public:
-		PriorityQueue(): head(0), tail(0), size(0){};
+		typedef LinkedNode<type_t> node_t;
+		PriorityQueue(): m_head(0), m_tail(0), m_size(0){};
 		PriorityQueue(const PriorityQueue& orig){};
 		virtual ~PriorityQueue(){
 			clear();
 		};
 
-		const type_t head(){
-			if (head) {
-				return head->data;
+		type_t head(){
+			if (m_head) {
+				return m_head->data;
 			} else {
-				std::cerr << "Trying to check head of empty queue." << std::endl;
+				std::cerr << "Trying to check m_head of empty queue." << std::endl;
 				return type_t();
 			}
 		};
 
-		const type_t tail(){
-			if (tail) {
-				return tail->data;
+		type_t tail(){
+			if (m_tail) {
+				return m_tail->data;
 			} else {
-				std::cerr << "Trying to check tail of empty queue." << std::endl;
+				std::cerr << "Trying to check m_tail of empty queue." << std::endl;
 				return type_t();
 			}
 		};
 
 		void pushTail(type_t element){
-			if (size == 0) {
-				head = new node_t(0, 0, element);
-				tail = head;
-				size++;
+			if (m_size == 0) {
+				m_head = new node_t(0, 0, element);
+				m_tail = m_head;
+				m_size++;
 				return;
 			}
 
-			node_t *nuevo = new node_t(tail, 0, element);
-			tail->next = nuevo;
-			tail = nuevo;
-			size++;
+			node_t *nuevo = new node_t(m_tail, 0, element);
+			m_tail->next = nuevo;
+			m_tail = nuevo;
+			m_size++;
 			return;
 		};
 
 		type_t popHead(){
-			if (size == 0) {
-				std::cerr << "Trying to pop tail of empty queue." << std::endl;
+			if (m_size == 0) {
+				std::cerr << "Trying to pop m_tail of empty queue." << std::endl;
 				return type_t();
 			}
 
-			type_t data(head->data);
+			type_t data(m_head->data);
 
-			if (size == 1) {
-				delete head;
-				head = 0;
-				tail = 0;
-				size--;
+			if (m_size == 1) {
+				delete m_head;
+				m_head = 0;
+				m_tail = 0;
+				m_size--;
 				return data;
 			}
 
-			head = head->next;
-			delete head->prev;
-			head->prev = 0;
-			size--;
+			m_head = m_head->next;
+			delete m_head->prev;
+			m_head->prev = 0;
+			m_size--;
 			return data;
 		};
 
-		const int size(){
-			return size;
+		int size(){
+			return m_size;
 		};
 
 
-		const bool empty(){
-			return size == 0;
-		}
+		bool empty(){
+			return m_size == 0;
+		};
 
-		const void imprimir(){};
+		void imprimir(){};
 
 	protected:
-		node_t *head;
-		node_t *tail;
-		int size;
+
+		node_t* m_head;
+		node_t* m_tail;
+		int m_size;
 
 		void clear(){
-			node_t *it;
-			it = head;
+			node_t* it;
+			it = m_head;
 			if (it != 0) {
 				while (it->next != 0) {
 					it = it->next;
@@ -97,9 +99,9 @@ class PriorityQueue : public Cola<type_t> {
 				delete it;
 			}
 
-			size = 0;
-			head = 0;
-			tail = 0;
+			m_size = 0;
+			m_head = 0;
+			m_tail = 0;
 			return;
 		}
 
