@@ -1,10 +1,10 @@
 #ifndef LISTACONPUNTERO_H
 #define LISTACONPUNTERO_H
 
-#include <Lista.h>
+#include "Lista.h"
 
-
-class ListaConPuntero : public Lista
+template<typename type_t>
+class ListaConPuntero : public Lista<type_t>
 {
     public:
         ListaConPuntero();
