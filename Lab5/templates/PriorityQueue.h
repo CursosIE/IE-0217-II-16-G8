@@ -15,7 +15,7 @@ class PriorityQueue : public Cola<type_t> {
 			clear();
 		};
 
-		type_t head(){
+		const type_t head(){
 			if (m_head) {
 				return m_head->data;
 			} else {
@@ -24,7 +24,7 @@ class PriorityQueue : public Cola<type_t> {
 			}
 		};
 
-		type_t tail(){
+		const type_t tail(){
 			if (m_tail) {
 				return m_tail->data;
 			} else {
@@ -33,7 +33,7 @@ class PriorityQueue : public Cola<type_t> {
 			}
 		};
 
-		void pushTail(type_t element){
+		void pushTail(const type_t &element){
 			if (m_size == 0) {
 				m_head = new node_t(0, 0, element);
 				m_tail = m_head;
@@ -71,16 +71,24 @@ class PriorityQueue : public Cola<type_t> {
 			return data;
 		};
 
-		int size(){
+		const int size(){
 			return m_size;
 		};
 
 
-		bool empty(){
+		const bool empty(){
 			return m_size == 0;
 		};
 
-		void imprimir(){};
+		const void imprimir(){
+			std::cout << "Cola de prioridad con " << m_size << " elementos." << std::endl;
+			node_t *it = m_head;
+			for (int i = 0; i < m_size; i++) {
+				std::cout << it->data << " ";
+				it = it->next;
+			}
+			std::cout << std::endl;
+		};
 
 	protected:
 

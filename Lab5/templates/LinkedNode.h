@@ -12,7 +12,7 @@ class LinkedNode {
 		LinkedNode(const node_t& orig):
 			prev(0), next(0), data(orig.data){};
 
-		LinkedNode(const node_t* n_prev, const node_t* n_next, const type_t n_data):
+		LinkedNode(node_t* n_prev, node_t* n_next, type_t n_data):
 			prev(n_prev), next(n_next), data(n_data){};
 
 		virtual ~LinkedNode(){};
