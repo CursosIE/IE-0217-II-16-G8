@@ -14,7 +14,7 @@ class Cola {
 		virtual void pushTail(const type_t &element) = 0;
 		virtual type_t popHead() = 0;
 
-		virtual const int size() = 0; 
+		virtual const int size() = 0;
 		virtual const bool empty() = 0;
 		virtual const void imprimir() = 0;
 };

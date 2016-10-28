@@ -2,10 +2,12 @@
 
 PilaDeCartas::PilaDeCartas()
 {
-    //ctor
+    PilaCartas.push('1'); 
 }
 
 PilaDeCartas::~PilaDeCartas()
 {
     //dtor
 }
+
+void Barajar(){}

@@ -15,11 +15,11 @@ public:
 
   Stack(const Stack& orig){};
 
-  virtual ~PriorityQueue(){
+  virtual ~Stack(){
     clear();
   };
 
-  type_t top(){
+   type_t top()const{
     if (m_top) {
       return m_top->data;
     } else {
@@ -67,16 +67,16 @@ public:
     return data;
   };
 
-  int size(){
+   int size()const{
     return m_size;
   };
 
 
-  bool empty(){
+  bool empty()const {
     return m_size == 0;
   };
 
-  void imprimir(){};
+  void imprimir()const {};
 
 protected:
 
@@ -104,3 +104,6 @@ protected:
 };
 
 #endif
+
+// int main(){Stack<char> mi_stack;
+//            mi_stack.push('c');}
