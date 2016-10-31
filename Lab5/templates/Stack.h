@@ -94,21 +94,17 @@ public:
 		   second->next->prev = second;
 
 	   // Si alguno de los nodos era el primero o el último se actualiza eso tambien
-	   if (head == first)
-		   head = second;
-	   if (head == second)
-		   head = first;
-	   if (tail == first)
-		   tail = second;
-	   if (tail == second)
-		   tail = first;
+	   if (m_top == first)
+		   m_top = second;
+	   if (m_top == second)
+		   m_top = first;
+	   if (m_bottom == first)
+		   m_bottom = second;
+	   if (m_bottom == second)
+		   m_bottom = first;
 
 	   return;
    }
-	   
-
-	   // node->  <-first-> <-node ... node-> <-second-> <-node
-
 	   
 
   bool empty()const {
