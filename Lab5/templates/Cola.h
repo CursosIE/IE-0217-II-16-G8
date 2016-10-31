@@ -8,15 +8,15 @@ class Cola {
 		Cola(const Cola& orig){};
 		virtual ~Cola(){};
 
-		virtual const type_t head() = 0;
-		virtual const type_t tail() = 0;
+		virtual type_t head() const = 0;
+		virtual type_t tail() const = 0;
 
 		virtual void pushTail(const type_t &element) = 0;
 		virtual type_t popHead() = 0;
 
-		virtual const int size() = 0;
-		virtual const bool empty() = 0;
-		virtual const void imprimir() = 0;
+		virtual int size() const = 0;
+		virtual bool empty() const = 0;
+		virtual void imprimir() const = 0;
 };
 
 #endif
