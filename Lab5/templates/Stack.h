@@ -71,6 +71,45 @@ public:
     return m_size;
   };
 
+   void swap(node_t* first, node_t* second){
+	   node_t *temp_prev, *temp_next;
+	   temp_prev = first->prev;
+	   temp_next = first->next;
+
+	   // Se enlazan los nodos a intercambiar
+	   first->prev = second->prev;
+	   first->next = second->next;
+
+	   second->prev = temp_prev;
+	   second->next = temp_next;
+
+	   // Se actualizan los nodos que apuntaban a los intercambiados
+	   if (first->prev)
+		   first->prev->next = first;
+	   if (first->next)
+		   first->next->prev = first;
+	   if (second->prev)
+		   second->prev->next = second;
+	   if (second->next)
+		   second->next->prev = second;
+
+	   // Si alguno de los nodos era el primero o el último se actualiza eso tambien
+	   if (head == first)
+		   head = second;
+	   if (head == second)
+		   head = first;
+	   if (tail == first)
+		   tail = second;
+	   if (tail == second)
+		   tail = first;
+
+	   return;
+   }
+	   
+
+	   // node->  <-first-> <-node ... node-> <-second-> <-node
+
+	   
 
   bool empty()const {
     return m_size == 0;
