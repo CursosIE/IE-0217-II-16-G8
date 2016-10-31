@@ -7,8 +7,8 @@ template<typename type_t>
 class ListaConPuntero : public Lista<type_t>
 {
     public:
-        ListaConPuntero();
-        virtual ~ListaConPuntero();
+        ListaConPuntero(){};
+        virtual ~ListaConPuntero(){};
 
     protected:
 

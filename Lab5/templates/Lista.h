@@ -4,9 +4,9 @@
 template <typename type_t>
 class Lista { //lista de type_ts
 public:
-    Lista();
-    Lista(const Lista& orig);
-    virtual ~Lista();
+    Lista(){};
+    Lista(const Lista& orig){};
+    virtual ~Lista(){};
 
     virtual void agregar(type_t e) = 0;
     virtual void agregarEnOrdenAscendente(type_t e) = 0;
