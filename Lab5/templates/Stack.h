@@ -72,6 +72,9 @@ public:
   };
 
    void swap(node_t* first, node_t* second){
+	   if (first == second)
+		   return;
+
 	   node_t *temp_prev, *temp_next;
 	   temp_prev = first->prev;
 	   temp_next = first->next;
@@ -94,14 +97,22 @@ public:
 		   second->next->prev = second;
 
 	   // Si alguno de los nodos era el primero o el último se actualiza eso tambien
-	   if (m_top == first)
+	   if (m_top == first && m_bottom == second) {
 		   m_top = second;
-	   if (m_top == second)
-		   m_top = first;
-	   if (m_bottom == first)
-		   m_bottom = second;
-	   if (m_bottom == second)
 		   m_bottom = first;
+	   } else if (m_top == second && m_bottom == first) {
+		   m_top = first;
+		   m_bottom = second;
+	   } else {
+		   if (m_bottom == first)
+			   m_bottom = second;
+		   if (m_bottom == second)
+			   m_bottom = first;
+		   if (m_top == first)
+			   m_top = second;
+		   if (m_top == second)
+			   m_top = first;
+	   }
 
 	   return;
    }
@@ -111,7 +122,26 @@ public:
     return m_size == 0;
   };
 
-  void imprimir()const {};
+  void imprimir()const {
+	std::cout << "Stack con " << m_size << " elementos." << std::endl;
+	node_t *it = m_top;
+	for (int i = 0; i < m_size; i++) {
+		std::cout << it->data << " ";
+		it = it->prev;
+	}
+	std::cout << std::endl;
+
+  };
+
+  void reverse_imprimir() const {
+	std::cout << "Stack con " << m_size << " elementos, al verris." << std::endl;
+	node_t *it = m_bottom;
+	for (int i = 0; i < m_size; i++) {
+		std::cout << it->data << " ";
+		it = it->next;
+	}
+	std::cout << std::endl;
+  };
 
 protected:
 
