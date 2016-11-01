@@ -12,7 +12,7 @@ class Jugador {
 		~Jugador();
 
 
-		void repartir(carta);
+		void repartir(carta c);
 		void reset();
 		int suma() const;
 
