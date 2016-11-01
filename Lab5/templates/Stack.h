@@ -121,6 +121,25 @@ public:
   bool empty()const {
     return m_size == 0;
   };
+  
+  void deb_imprimir() const {
+	std::cerr << "Stack, m_size " << m_size << ", top: " << m_top << ", bottom: " << m_bottom << std::endl;
+	node_t *it = m_top;
+	if (m_top) {
+		if (m_top->next) {
+		std::cout << "wtf top is drunk" << m_top->next << std::endl;
+		}
+	}
+
+	
+	for (int i = 0; i < m_size; i++) {
+		std::cout << it << " >> ";
+		it = it->prev;
+	}
+	if (it)
+		std::cout << it->prev;
+	std::cout << std::endl;
+  }
 
   void imprimir()const {
 	std::cout << "Stack con " << m_size << " elementos." << std::endl;

@@ -9,7 +9,7 @@ using namespace std;
 
 PilaDeCartas::PilaDeCartas()
 {
-    push('1');
+    // push('1');
 }
 
 PilaDeCartas::~PilaDeCartas()
@@ -23,19 +23,23 @@ void PilaDeCartas::Barajar(){
 	node_t* it = m_top;
 	for (int i = 0; i < m_size; i++) {
 		nodos[i] = it;
-		it = it->next;
+		it = it->prev;
 	}
 
-   default_random_engine gen;
-	 uniform_int_distribution<int> rng(0, m_size-1);
+	default_random_engine gen;
 	//Algoritmo Fisher-Yates
 	for (int i = m_size -1; i > 0; i--) {
-		// rng.max(i);
+		uniform_int_distribution<int> rng(0, i);
 		int j = rng(gen);
-        swap(nodos[i], nodos[j]);
-        it = nodos[i];
-        nodos[i] = nodos[j];
-        nodos[j] = it;
+		cout << "swaping i: " << i << ", j: " << j << endl; 
+		swap(nodos[i], nodos[j]);
+		//this->imprimir();
+		//this->reverse_imprimir();
+		deb_imprimir();
+		cout << endl;
+        	// it = nodos[i];
+	        // nodos[i] = nodos[j];
+	        // nodos[j] = it;
 	}
-    return;
+	return;
 }
