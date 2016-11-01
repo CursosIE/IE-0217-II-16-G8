@@ -23,7 +23,7 @@ public:
     if (m_top) {
       return m_top->data;
     } else {
-      std::cerr << "Trying to check m_head of empty queue." << std::endl;
+      std::cerr << "Trying to check m_top of empty stack." << std::endl;
       return type_t();
     }
   };
@@ -97,7 +97,7 @@ public:
 		   second->next->prev = second;
 
 	   // Si alguno de los nodos era el primero o el último se actualiza eso tambien
-	   if (m_top == first && m_bottom == second) {
+	   if (m_top == first && m_bottom == second) { // Aqui debe estar el error. Mover todo este if hasta arriba 
 		   m_top = second;
 		   m_bottom = first;
 	   } else if (m_top == second && m_bottom == first) {
@@ -121,7 +121,7 @@ public:
   bool empty()const {
     return m_size == 0;
   };
-  
+
   void deb_imprimir() const {
 	std::cerr << "Stack, m_size " << m_size << ", top: " << m_top << ", bottom: " << m_bottom << std::endl;
 	node_t *it = m_top;
@@ -131,7 +131,7 @@ public:
 		}
 	}
 
-	
+
 	for (int i = 0; i < m_size; i++) {
 		std::cout << it << " >> ";
 		it = it->prev;
