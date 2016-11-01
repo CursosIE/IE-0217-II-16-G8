@@ -8,14 +8,14 @@ class Pila {
 		Pila(const Pila& orig){};
 		virtual ~Pila(){};
 
-		virtual type_t top() const{};
+		virtual type_t top() const = 0;
 
-		virtual void push(type_t element) const{};
-		virtual type_t pop()const{};
+		virtual void push(type_t element) = 0;
+		virtual type_t pop() = 0;
 
-		virtual int size()const{};
-		virtual  bool empty() const{};
-		virtual  void imprimir() const{};
+		virtual int size()const  = 0;
+		virtual  bool empty() const = 0;
+		virtual  void imprimir() const = 0;
 };
 
 #endif
