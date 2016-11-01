@@ -1,8 +1,11 @@
 #include "carta.h"
 #include <iostream>
 
+std::ostream& operator<<(std::ostream& stream, const carta& c){
+	return stream << c.symbol;
+}
 
-carta::carta(): symbol('0'), value(0)
+carta::carta(): value(0), symbol('0')
 {
     //ctor
 }
