@@ -6,7 +6,10 @@ obj := $(notdir $(src:.cpp=.o))
 
 CC = g++ -Wall -std=c++11
 
-all: plantillas $(obj)
+all: a.out
+
+a.out: main.cpp plantillas $(obj)
+	$(CC) $(tmpl) $(inc) *.o main.cpp
 
 plantillas: $(tmpl_files)
 	$(CC) $(tmpl) -fsyntax-only $(tmpl_files)
