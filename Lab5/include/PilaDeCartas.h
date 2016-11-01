@@ -15,11 +15,9 @@ class PilaDeCartas: public Stack<carta>{
             PilaDeCartas();
             ~PilaDeCartas();
 
-            void Barajar()const{};
+            void Barajar();
 
     private:
-
-    Stack<carta> Baraja_inglesa;
 
 
 };

@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-carta::carta(): symb('0'), valor(0)
+carta::carta(): symbol('0'), value(0)
 {
     //ctor
 }
@@ -32,10 +32,10 @@ carta::carta(char symb): symbol(symb)
     } else {
         cerr << "Not a valid card value" << endl;
     }
-    //  Hay un problema con esa forma de guarda la carta y es que un 10 no se puede guardar como un solo 
+    //  Hay un problema con esa forma de guarda la carta y es que un 10 no se puede guardar como un solo
     //  character por obvias razones. Entonces si su idea era usar chars para que fuera mas facil de
-    //  imprimir o algo así, no va a funcionar tan bien. xD 
-    
+    //  imprimir o algo así, no va a funcionar tan bien. xD
+
 }
 
 carta::~carta()

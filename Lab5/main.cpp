@@ -1,9 +1,11 @@
 #include <iostream>
+#include "PilaDeCartas.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    PilaDeCartas Mi_mazo;
+    cout << "Hice un mazo" << endl;
+    Mi_mazo.push('3'); 
 }

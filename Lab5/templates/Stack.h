@@ -105,7 +105,7 @@ public:
 
 	   return;
    }
-	   
+
 
   bool empty()const {
     return m_size == 0;
