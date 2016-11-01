@@ -9,12 +9,12 @@ class Jugador {
 	public:
 		Jugador();
 		Jugador(char tipo);
-		~Jugador();
+		virtual ~Jugador();
 
 
 		void repartir(carta c);
 		void reset();
-		int suma() const;
+		int puntos() const;
 
 
 		
