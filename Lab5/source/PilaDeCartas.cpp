@@ -1,9 +1,11 @@
 #include "PilaDeCartas.h"
 #include <random>
 
+typedef LinkedNode<carta> node_t;
+
 PilaDeCartas::PilaDeCartas()
 {
-    PilaCartas.push('1'); 
+    PilaDeCartas.push('1');
 }
 
 PilaDeCartas::~PilaDeCartas()

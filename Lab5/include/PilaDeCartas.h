@@ -3,22 +3,24 @@
 
 #include "Stack.h"
 #include "carta.h"
+#include "LinkedNode.h"
 
 
 using namespace std;
 
-class PilaDeCartas: public Pila<carta>{
+class PilaDeCartas: public Stack<carta>{
+  typedef LinkedNode<carta> node_t;
 
-  typedef Stack<carta> StackDeCartas;
     public:
-            PilaDeCartas(); // Hacer el mazo
+            PilaDeCartas();
             ~PilaDeCartas();
 
-            void Barajar();
+            void Barajar()const{};
 
     private:
 
-    StackDeCartas PilaCartas;
+    Stack<carta> Baraja_inglesa;
+
 
 };
 
