@@ -4,7 +4,7 @@
 #include "Stack.h"
 #include "carta.h"
 #include "LinkedNode.h"
-
+#include <list>
 
 using namespace std;
 
@@ -15,9 +15,11 @@ class PilaDeCartas: public Stack<carta>{
             PilaDeCartas();
             ~PilaDeCartas();
 
-            void Barajar();
+            void Shuffle();
 
     private:
+
+           std::list<carta> Baraja_inglesa;
 
 
 };

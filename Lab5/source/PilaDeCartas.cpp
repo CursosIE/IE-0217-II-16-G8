@@ -9,7 +9,26 @@ using namespace std;
 
 PilaDeCartas::PilaDeCartas()
 {
-    // push('1');
+	carta AS('A'); carta UNO('1'); carta DOS('2'); carta TRES('3'); carta CUATRO('4'); carta CINCO('5');
+	carta SEIS('6'); carta SIETE('7'); carta OCHO('8'); carta NUEVE('9');carta DIEZ('X'); carta J('J');
+	carta Q('Q'); carta K('K');
+
+	Baraja_inglesa.push_back(AS);
+	Baraja_inglesa.push_back(UNO);
+	Baraja_inglesa.push_back(DOS);
+	Baraja_inglesa.push_back(TRES);
+	Baraja_inglesa.push_back(CUATRO);
+	Baraja_inglesa.push_back(CINCO);
+	Baraja_inglesa.push_back(SEIS);
+	Baraja_inglesa.push_back(SIETE);
+	Baraja_inglesa.push_back(OCHO);
+	Baraja_inglesa.push_back(NUEVE);
+	Baraja_inglesa.push_back(DIEZ);
+	Baraja_inglesa.push_back(J);
+	Baraja_inglesa.push_back(Q);
+	Baraja_inglesa.push_back(K);
+
+
 }
 
 PilaDeCartas::~PilaDeCartas()
@@ -17,29 +36,12 @@ PilaDeCartas::~PilaDeCartas()
     //dtor
 }
 
-void PilaDeCartas::Barajar(){
-	//Primero se hace un arreglo de todos los nodos;
-	node_t* nodos[m_size];
-	node_t* it = m_top;
-	for (int i = 0; i < m_size; i++) {
-		nodos[i] = it;
-		it = it->prev;
-	}
+void PilaDeCartas::Shuffle(){
 
-	default_random_engine gen;
-	//Algoritmo Fisher-Yates
-	for (int i = m_size -1; i > 0; i--) {
-		uniform_int_distribution<int> rng(0, i);
-		int j = rng(gen);
-		cout << "swaping i: " << i << ", j: " << j << endl; 
-		swap(nodos[i], nodos[j]);
-		//this->imprimir();
-		//this->reverse_imprimir();
-		deb_imprimir();
-		cout << endl;
-        	// it = nodos[i];
-	        // nodos[i] = nodos[j];
-	        // nodos[j] = it;
-	}
-	return;
+	for (std::list<carta>::iterator it = Baraja_inglesa.begin(); it != Baraja_inglesa.end(); it++){
+		this->push(*it);
+			}
+
+
+
 }

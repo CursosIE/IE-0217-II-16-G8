@@ -71,51 +71,53 @@ public:
     return m_size;
   };
 
-   void swap(node_t* first, node_t* second){
-	   if (first == second)
-		   return;
 
-	   node_t *temp_prev, *temp_next;
-	   temp_prev = first->prev;
-	   temp_next = first->next;
-
-	   // Se enlazan los nodos a intercambiar
-	   first->prev = second->prev;
-	   first->next = second->next;
-
-	   second->prev = temp_prev;
-	   second->next = temp_next;
-
-	   // Se actualizan los nodos que apuntaban a los intercambiados
-	   if (first->prev)
-		   first->prev->next = first;
-	   if (first->next)
-		   first->next->prev = first;
-	   if (second->prev)
-		   second->prev->next = second;
-	   if (second->next)
-		   second->next->prev = second;
-
-	   // Si alguno de los nodos era el primero o el último se actualiza eso tambien
-	   if (m_top == first && m_bottom == second) { // Aqui debe estar el error. Mover todo este if hasta arriba 
-		   m_top = second;
-		   m_bottom = first;
-	   } else if (m_top == second && m_bottom == first) {
-		   m_top = first;
-		   m_bottom = second;
-	   } else {
-		   if (m_bottom == first)
-			   m_bottom = second;
-		   if (m_bottom == second)
-			   m_bottom = first;
-		   if (m_top == first)
-			   m_top = second;
-		   if (m_top == second)
-			   m_top = first;
-	   }
-
-	   return;
-   }
+  //  void swap(node_t* first, node_t* second){
+	//    if (first == second)
+	// 	   return;
+   //
+	//    node_t *temp_prev, *temp_next;
+	//    temp_prev = first->prev;
+	//    temp_next = first->next;
+   //
+	//    // Se enlazan los nodos a intercambiar
+	//    first->prev = second->prev;
+	//    first->next = second->next;
+   //
+	//    second->prev = temp_prev;
+	//    second->next = temp_next;
+   //
+	//    // Se actualizan los nodos que apuntaban a los intercambiados
+	//    if (first->prev)
+	// 	   (first->prev)->next = first;
+	//    if (first->next)
+	// 	   (first->next)->prev = first;
+	//    if (second->prev)
+	// 	   (second->prev)->next = second;
+	//    if (second->next)
+	// 	   (second->next)->prev = second;
+   //
+	//    // Si alguno de los nodos era el primero o el último se actualiza eso tambien
+	//    if (m_top == first && m_bottom == second) { // Aqui debe estar el error. Mover todo este if hasta arriba
+	// 	   m_top = second;
+	// 	   m_bottom = first;
+	//        } else if (m_top == second && m_bottom == first) {
+	// 	   m_top = first;
+	// 	   m_bottom = second;
+	//      }
+   //
+	// 	   if (m_bottom == first)
+	// 		   m_bottom = second;
+	// 	   else if (m_bottom == second)
+	// 		   m_bottom = first;
+	// 	   if (m_top == first)
+	// 		   m_top = second;
+	// 	   else if (m_top == second)
+	// 		   m_top = first;
+   //
+   //
+	//    return;
+  //  }
 
 
   bool empty()const {
@@ -162,7 +164,7 @@ public:
 	std::cout << std::endl;
   };
 
-protected:
+// protected:
 
   node_t* m_top;
   node_t* m_bottom;
