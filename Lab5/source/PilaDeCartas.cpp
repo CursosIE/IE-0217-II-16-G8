@@ -20,13 +20,16 @@ void Barajar(){
 		it = it->next;
 	}
 
+    std::default_random_engine gen;
 	std::uniform_int_distribution<int> rng(0, m_size-1);
 	//Algoritmo Fisher-Yates
 	for (int i = m_size -1; i > 0; i--) {
 		rng.max(i);
-		int j = rng.();
+		int j = rng(gen);
+        swap(nodos[i], nodos[j]);
+        it = nodos[i];
+        nodos[i] = nodos[j];
+        nodos[j] = it;
 	}
-		
-
-
+    return;
 }
