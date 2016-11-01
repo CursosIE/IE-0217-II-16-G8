@@ -2,12 +2,12 @@
 #include <iostream>
 
 
-carta::carta()
+carta::carta(): symb('0'), valor(0)
 {
     //ctor
 }
 
-carta::carta(char symb)
+carta::carta(char symb): symbol(symb)
 {
 
     //    Una pequeña correcion aqui mop, ya entendí
@@ -41,4 +41,9 @@ carta::carta(char symb)
 carta::~carta()
 {
     //dtor
+}
+
+int carta::valor()
+{
+    return value;
 }

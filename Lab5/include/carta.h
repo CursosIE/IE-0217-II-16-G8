@@ -10,8 +10,9 @@ class carta
       carta();
       carta(char symbol);
 
-        virtual ~carta();
+      virtual ~carta();
 
+      int valor();
 
     private:
 
