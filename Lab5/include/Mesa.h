@@ -3,17 +3,18 @@
 
 #include <list>
 #include "PilaDeCartas.h"
+#include "Jugador.h"
 
 class Mesa {
 	public:
 		Mesa();
-		~Mesa();
+		virtual ~Mesa();
 
 		void sentar(const char &jugador);
 		void play();
 		void echar();
 
-		int jugadores() const;
+		int num_jugadores() const;
 		bool llena() const;
 		void imprimir() const;
 
@@ -21,10 +22,10 @@ class Mesa {
 		
 
 	private:
-		void inicializar()
-		void turno();
-		bool gameover();
+		void inicializar();
+		bool gameover() const;
 
+		//PilaDummy maso;
 		PilaDeCartas maso;
 		std::list<Jugador> jugadores;
 		
