@@ -51,10 +51,10 @@ bool Mesa::llena() const
 void Mesa::imprimir() const
 {
 	std::cout << std::endl;
-	std::cout << "Mesa con " << num_jugadores() << " jugadores";
+	std::cout << "Mesa con " << num_jugadores() << " jugadores" << std::endl;
 	int i = 1;
 	for (auto it = jugadores.begin(); it != jugadores.end(); it++) {
-		std::cout << "Jugador " << i << ": " << it->puntos() << " puntos" << std::endl;
+		std::cout << "Jugador " << it->tipo() << ": " << it->puntos() << " puntos" << std::endl;
 		i++;
 	}
 	std::cout << std::endl;
