@@ -15,6 +15,7 @@ class Jugador {
 		void repartir(carta c);
 		void reset();
 		int puntos() const;
+		char tipo() const;
 
 
 		

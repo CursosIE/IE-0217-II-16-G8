@@ -24,5 +24,9 @@ int Jugador::puntos() const {
 	return m_score;
 }
 
+char Jugador::tipo() const {
+	return m_tipo;
+}
+
 //Jugador::
 
