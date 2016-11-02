@@ -3,6 +3,7 @@
 #include "PilaDeCartas.h"
 #include "Mesa.h"
 #include "PriorityQueue.h"
+#include "Casino.h"
 #include <cstring>
 
 using namespace std;
@@ -18,12 +19,13 @@ int main(int argc, char* argv[])
 
 
 	PriorityQueue<char> q1;
+	Casino *c = new Casino();
 
 	for (int i = 0; i < strlen(argv[1]); i++) { 
-		q1.pushTail(argv[1][i]);
+		c->encolar(argv[1][i]);
 	}
 
-	q1.imprimir();
+	c->imprimir();
 
 	// Ejemplo de como usar la cola
 //	cout << "Creando mesilla!" << endl;
