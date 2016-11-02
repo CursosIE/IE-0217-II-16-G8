@@ -62,8 +62,8 @@ void Mesa::imprimir() const
 
 void Mesa::inicializar()
 {
-	maso.llenar();
-	maso.barajar();
+	maso.clear();
+	maso.Shuffle();
 	for (auto it = jugadores.begin(); it != jugadores.end(); it++) {
 		it->reset();
 	}
