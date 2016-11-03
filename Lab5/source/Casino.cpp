@@ -7,7 +7,7 @@
 
 using namespace std;
 
- Casino::Casino() 
+ Casino::Casino():cuenta(0) 
 {
 }
 
@@ -37,13 +37,16 @@ void Casino::moverGente()
 	
 	//Luego se sienta la gente
 	//que viene entrando
-	int j = 0;
+	int j = cuenta%7;
+	int index = j == 6 ? 2 : (j%3 == 2);
 	for (int i = 0; i < 3; i++) {
 		while (!mesas[i].llena() && hayFila()) {
-			if (!colas[j%3].empty()) {
-				mesas[i].sentar(colas[j%3].popHead());
+			if (!colas[index].empty()) {
+				mesas[i].sentar(colas[index].popHead());
 			}
-			j++;
+			cuenta++;
+			j = cuenta%7;
+			index = (j == 6) ? 2 : (j%3 == 2);
 		}
 	}
 			

@@ -28,9 +28,12 @@ int main(int argc, char* argv[])
 
 	cout << endl << "\t\tBienvenido al CASINO!!!!" << endl << endl;
 
+	cout << separador << endl;
+	cout << "\t\tIteración " << 0 << endl << endl;
+	c->imprimir();
 	int i = 1;
 	
-	while (c->hayGente() && i < 10) {
+	while (c->hayGente() && i <= 10) {
 
 		cout << separador << endl;
 		cout << "\t\tIteración " << i << endl << endl;

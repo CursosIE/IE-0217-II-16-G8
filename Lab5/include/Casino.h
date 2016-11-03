@@ -71,6 +71,7 @@ class Casino {
 
 		PriorityQueue<char> colas[3]; /**<Las colas para entrar al casino.*/
 		Mesa mesas[3]; /**<Las mesas donde se pueden sentar a jugar las personas.*/
+		int cuenta;
 		
 		/**
 		 * Indica si hay gente haciendo fila.
