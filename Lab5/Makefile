@@ -1,4 +1,5 @@
 inc = -I ./include
+inc_files = $(wildcard include/*.h)
 tmpl = -I ./templates
 tmpl_files = $(wildcard templates/*.h)
 src := $(wildcard source/*.cpp)
@@ -8,6 +9,10 @@ CC = g++ -Wall -std=c++11
 
 all: a.out
 
+docs: doxy.config $(tmpl_files) $(inc_files)
+	rm -rf ./html ./latex
+	doxygen $<
+	
 a.out: main.cpp plantillas $(obj)
 	$(CC) $(tmpl) $(inc) *.o main.cpp
 
