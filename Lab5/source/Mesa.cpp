@@ -18,6 +18,7 @@ void Mesa::sentar(const char &jugador)
 void Mesa::play()
 {
 	inicializar();
+	//maso.imprimir();
 	while (!gameover()) {
 		for (auto it = jugadores.begin(); it != jugadores.end(); it++) {
 			if (it->puntos() < 19) {
@@ -26,6 +27,7 @@ void Mesa::play()
 			}
 		}
 	}
+	//maso.imprimir();
 }
 
 void Mesa::echar()
@@ -51,10 +53,10 @@ bool Mesa::llena() const
 void Mesa::imprimir() const
 {
 	std::cout << std::endl;
-	std::cout << "Mesa con " << num_jugadores() << " jugadores";
+	std::cout << "Mesa con " << num_jugadores() << " jugadores" << std::endl;
 	int i = 1;
 	for (auto it = jugadores.begin(); it != jugadores.end(); it++) {
-		std::cout << "Jugador " << i << ": " << it->puntos() << " puntos" << std::endl;
+		std::cout << "Jugador " << it->tipo() << ": " << it->puntos() << " puntos" << std::endl;
 		i++;
 	}
 	std::cout << std::endl;
@@ -63,7 +65,7 @@ void Mesa::imprimir() const
 void Mesa::inicializar()
 {
 	maso.llenar();
-	maso.barajar();
+	maso.Shuffle();
 	for (auto it = jugadores.begin(); it != jugadores.end(); it++) {
 		it->reset();
 	}

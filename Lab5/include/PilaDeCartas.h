@@ -29,6 +29,7 @@ class PilaDeCartas: public Stack<carta>{
             * Metodo que baraja aleatoriamente las cartas que hayan en la pila de cartas.
             */
             void Shuffle();
+	    void llenar();
 
     private:
 
