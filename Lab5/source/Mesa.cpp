@@ -18,6 +18,7 @@ void Mesa::sentar(const char &jugador)
 void Mesa::play()
 {
 	inicializar();
+	//maso.imprimir();
 	while (!gameover()) {
 		for (auto it = jugadores.begin(); it != jugadores.end(); it++) {
 			if (it->puntos() < 19) {
@@ -26,6 +27,7 @@ void Mesa::play()
 			}
 		}
 	}
+	//maso.imprimir();
 }
 
 void Mesa::echar()
@@ -62,7 +64,7 @@ void Mesa::imprimir() const
 
 void Mesa::inicializar()
 {
-	maso.clear();
+	maso.llenar();
 	maso.Shuffle();
 	for (auto it = jugadores.begin(); it != jugadores.end(); it++) {
 		it->reset();
