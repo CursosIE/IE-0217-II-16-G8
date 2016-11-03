@@ -16,6 +16,7 @@ class PilaDeCartas: public Stack<carta>{
             ~PilaDeCartas();
 
             void Shuffle();
+	    void llenar();
 
     private:
 

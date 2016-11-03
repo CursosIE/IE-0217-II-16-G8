@@ -1,6 +1,7 @@
 #include "PilaDeCartas.h"
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
+#include <ctime>
 
 
 typedef LinkedNode<carta> node_t;
@@ -40,6 +41,7 @@ void PilaDeCartas::Shuffle(){
 
 	int size = this->m_size;
 	this->clear();
+	srand(clock());
 
 	for(int i = 0 ; i < size ; i++){
 	std::list<carta>::iterator it = Baraja_inglesa.begin();
@@ -50,6 +52,21 @@ void PilaDeCartas::Shuffle(){
 		carta rand_card = *it;
 		this->push(rand_card);
 	}
-	std::cout << "Mazo barajado y listo para jugar!" << std::endl;
+	//std::cout << "Mazo barajado y listo para jugar!" << std::endl;
 
 }
+
+void PilaDeCartas::llenar(){
+	this->clear();
+	for(int i = 0; i < 4; i++){
+		this->push('A');
+		for(char c = '2'; c <= '9'; c++){
+			this->push(c);
+		}
+		this->push('X');
+		this->push('J');
+		this->push('Q');
+		this->push('K');
+	}
+}
+
