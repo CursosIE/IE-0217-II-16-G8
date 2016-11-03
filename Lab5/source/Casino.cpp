@@ -52,7 +52,7 @@ void Casino::moverGente()
 void Casino::correr()
 {
 	for (int i = 0; i < 3; i++) {
-		mesas[i].echar();
+		mesas[i].play();
 	}
 }
 
